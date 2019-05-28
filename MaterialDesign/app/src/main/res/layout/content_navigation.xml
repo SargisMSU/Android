@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NavigationActivity"
+    tools:showIn="@layout/app_bar_navigation">
+
+    <TextView
+        android:text="...."
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_below="@+id/textInputLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Add"
+        android:background="@drawable/ripple"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/textInputLayout"
+        android:layout_below="@+id/textView"
+        android:hint="Пример hint текста"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/edit_text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/btn"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
